@@ -4,7 +4,10 @@ function onReady() {
     // load data from the server, put it on the DOM
     getPlayerData();
     getTournamentData();
+
 }
+let newPlayer;
+let newTournament;
 
 // get player data from the server
 function getPlayerData() {
@@ -24,7 +27,20 @@ function getPlayerData() {
             `);
         }
     });
+
+    $.ajax({
+        url: "/tennisplayers",
+        method: "POST",
+        data: newPlayer
+    })
+        .then(function (response) {
+            console.log("New player!", response);
+        })
+        .catch(function (errorInfo) {
+            alert("Uh oh!", errorInfo);
+        });
 }
+
 
 // get tournament data from the server
 function getTournamentData() {
@@ -43,4 +59,21 @@ function getTournamentData() {
             `);
         }
     });
+
+    $.ajax({
+        url: "/tournaments",
+        method: "POST",
+        data: newTournament
+    })
+        .then(function (response) {
+            console.log("New tournament!", response);
+        })
+        .catch(function (errorInfo) {
+            alert("Uh oh!", errorInfo);
+        });
 }
+
+
+
+
+
