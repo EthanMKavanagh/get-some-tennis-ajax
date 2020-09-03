@@ -3,14 +3,14 @@ $(document).ready(onReady);
 function onReady() {
     // load data from the server, put it on the DOM
     getPlayerData();
-    getTournamentData();    
+    getTournamentData();
 }
 
 // get player data from the server
 function getPlayerData() {
     $.ajax({
         type: 'GET',
-        url: '/players'
+        url: '/tennisplayers'
     }).then(function (response) {
         // append data to the DOM
         for (let i = 0; i < response.length; i++) {

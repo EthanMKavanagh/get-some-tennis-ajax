@@ -17,4 +17,4 @@ const tournamentsArray = [
     },
 ];
 
-module.exports = tournamentsArray
+module.exports = tournamentsArray;

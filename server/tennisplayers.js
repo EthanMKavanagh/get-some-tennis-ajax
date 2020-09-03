@@ -31,4 +31,3 @@ const tennisPlayersArray = [
     },
 ];
 module.exports = tennisPlayersArray;
-
