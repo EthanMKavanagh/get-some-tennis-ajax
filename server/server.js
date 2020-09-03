@@ -1,59 +1,10 @@
 const express = require('express');
-
+const tennisPlayersArray = require('./players.js');
+const tournamentsArray = require('./tournaments.js')
 const app = express();
 const PORT = 5000;
 
-const tennisPlayersArray = [
-    {
-        firstName: 'Serena',
-        lastName: 'Williams',
-        born: 1981,
-    },
-    {
-        firstName: 'Arthur',
-        lastName: 'Ashe',
-        born: 1943,
-    },
-    {
-        firstName: 'John',
-        lastName: 'McEnroe',
-        born: 1959,
-    },
-    {
-        firstName: 'Naomi',
-        lastName: 'Osaka',
-        born: 1997,
-    },
-    {
-        firstName: 'Andre',
-        lastName: 'Agassi',
-        born: 1970,
-    },
-    {
-        firstName: 'Bille Jean',
-        lastName: 'King',
-        born: 1943,
-    },
-];
-
-const tournamentsArray = [
-    {
-        name: 'Australian Open',
-        location: 'Melbourne, Australia',
-    },
-    {
-        name: 'French Open',
-        location: 'Paris, France',
-    },
-    {
-        name: 'Wimbledon',
-        location: 'Wimbledon, England',
-    },
-    {
-        name: 'US Open',
-        location: 'NYC, New York',
-    },
-];
+=
 
 app.use(express.static('server/public'));
 
